@@ -1,0 +1,36 @@
+<div class="h1"><h1>Edit Component</h1></div>
+<form [formGroup]="addComponent" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">name</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Description" id="floatingTextarea2" style="height: 100px" formControlName="description"></textarea>
+        <label for="floatingTextarea2">Description</label>
+      </div>
+    <div class="mb-3">
+        <label class="form-label">Cost</label>
+        <input type="text" class="form-control" id="cost" formControlName="cost">
+      </div>
+      <div class="form-outline mb-4">   
+        <label>Component Image</label>
+        <input
+          type="file"
+          id="file"
+          class="form-control"
+          (change)="onImageSelected($event)"
+          accept="*.jpg.png"
+          formControlName="componentImage"
+        />
+      </div>
+      <div class="form-floating">
+        <label for="floatingSelect">Working</label>
+        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" formControlName="working">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <div class="button">
+    <button type="submit" class="btn btn-primary">Edit</button>
+</div>
+</form>

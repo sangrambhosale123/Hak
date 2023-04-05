@@ -1,0 +1,53 @@
+<!-- <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+<div class="form-group">
+    <label for="name">Name: </label>
+    <input id="name" type="text" class="text" formControlName="name" >
+</div>
+<div class="form-group">
+    <label for="address">Address: </label>
+    <input id="address" type="text" class="text" formControlName="address" >
+</div>
+<div class="form-group">
+    <label for="college">College: </label>
+    <input id="college" type="text" class="text" formControlName="college" >
+</div>
+ <div class="form-group">
+    <label for="email">Email: </label>
+    <input id="email" type="text" class="text" formControlName="email" >
+</div> -->
+<!-- <div class="form-group">
+    <label for="number">Number: </label>
+    <input id="number" type="text" class="text" formControlName="number" >
+</div>
+<div class="form-outline mb-4">
+    <label>Edit Profile Photo</label>
+    <input
+      type="file"
+      id="file"
+      class="form-control"
+      (change)="onImageSelected($event)"
+      accept="*.jpg.png"
+      formControlName="profile"
+    />
+  </div>
+<button type="submit">Submit</button>
+</form> --> -->
+
+
+
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required formControlName="name">
+  
+    <label for="email">Address:</label>
+    <input type="email" id="address" name="address" placeholder="Enter your address" required formControlName="address">
+
+    <label for="email">College:</label>
+    <input type="email" id="college" name="college" placeholder="Enter your college" required formControlName="college">
+
+    <label for="email">Number:</label>
+    <input type="email" id="number" name="number" placeholder="Enter your number" required formControlName="number">
+  
+    <input type="submit" value="Submit">
+  </form>
+  

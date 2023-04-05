@@ -1,0 +1,30 @@
+.footer {
+   
+    width: 100%;
+    height: 400px;
+   bottom: 0;
+    background-color: #222534;
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  .foot {
+    width: 20%;
+    height: auto;
+    color: white;
+    margin: 30px 30px;
+  }
+  .para {
+    font-size: smaller;
+    margin: 10px 0;
+    color: rgb(177, 177, 177);
+  }
+  
+  .lis-item {
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  .lis-item a {
+    color: rgb(177, 177, 177);
+    font-size: small;
+  }

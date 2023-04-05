@@ -1,0 +1,63 @@
+<form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+    <div class="background">
+        <div class="register">
+            <div class="head"><h1>Add Project</h1></div>
+    <div class="form-group">
+        <input id="name" type="text" class="text" name="p_name" placeholder="Enter Project Name" ngModel required #p_name = "ngModel">
+        <span *ngIf = "p_name.invalid && p_name.touched" style="color: red;">Please Enter Project Name</span>
+    </div>
+  
+     <!-- Upload Image -->
+     <div class="form-outline mb-4">
+        <label>Upload Image 1</label>
+        <input type="file"  id="Imagefile" class="form-control" name="file" #file = "ngModel" (change) = "onImageSelected($event)"  ngModel />
+      </div>
+      <div class="form-outline mb-4">
+        <label>Upload Image 2</label>
+        <input type="file"  id="Imagefile" class="form-control" name="file" #file = "ngModel" (change) = "onImageSelected1($event)"  ngModel />
+      </div>
+      <div class="form-outline mb-4">
+        <label>Upload Image 3</label>
+        <input type="file"  id="Imagefile" class="form-control" name="file" #file = "ngModel" (change) = "onImageSelected2($event)"  ngModel />
+      </div>
+      <div class="form-outline mb-4">
+        <label>Upload Image 4</label>
+        <input type="file"  id="Imagefile" class="form-control" name="file" #file = "ngModel" (change) = "onImageSelected3($event)"  ngModel />
+      </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea id="desc" name="desc" style="max-width: 350px; width:100%" rows = "7" cols = "40" ngModel required #desc = "ngModel"></textarea>
+    </div>
+    <div class="form-group">
+        <label class="a" for="field">Select Field</label>
+        <select name="field" id="field" ngModel required #field = "ngModel">
+            <option value="Elec">Electronics</option>
+            <option value="Mech">Mechanicals</option>
+            <option value="Other">Other</option>
+        </select>
+        <span *ngIf = "field.invalid && field.touched" style="color: red;">Please Select Field</span>
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Toppings</mat-label>
+            <mat-select [formControl]="toppings" multiple>
+              <mat-select-trigger>
+                {{toppings.value?.[0] || ''}}
+                <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+                  (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+          </mat-form-field> -->
+    </div>
+    <div class="form-group">
+        <input id="sell" type="number" class="text" name="sell" placeholder="Sell Cost" ngModel required #sell = "ngModel">
+        <span *ngIf = "sell.invalid && sell.touched" style="color: red;">Please Enter Sell Cost</span>
+    </div>
+    <div class="button">
+        <button [disabled] = "f.invalid" type="submit" class="btn-register">Add</button>
+    </div>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,180 @@
+app-action-card {
+  width: 100%;
+  height: 100%;
+}
+.action-card.mat-card {
+  background: blue;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 0px 3px black;
+  color: var(--color-white);
+  margin: 0;
+  /* min-height: 165px; */
+  height: 100%;
+  cursor: pointer;
+}
+.action-card .mat-card-header {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: flex-start;
+  flex: auto;
+  margin-bottom: 0 !important;
+}
+.action-card .card-header-text {
+  font-size: var(--font-size-5);
+  margin: 0 0;
+  font-weight: 400;
+  line-height: 18px;
+}
+.action-card .mat-card-header-text {
+  width: 100% !important;
+  margin: 0;
+}
+.action-card .card-details {
+  font-size: 20px;
+  padding-top: 5px;
+}
+.action-card .underline-text {
+  height: 1px;
+  width: 25px;
+  background: white;
+  margin-top: 5px;
+}
+
+.action-card .material-icons {
+  font-size: 40px;
+  height: 35px;
+  width: 35px;
+}
+
+.action-card .count-text {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.action-card.mat-card.green-bg {
+  background: green;
+}
+.action-card.mat-card.blue-bg {
+  background: blue;
+}
+.action-card.mat-card.orange-bg {
+  background-color: red;
+}
+
+/* .corner-placemnent {
+  float: right;
+  padding-top: 20px;
+  cursor: pointer;
+} */
+.action-card.mat-card.yellow-bg {
+  background-color: #fca147;
+}
+.action-card.mat-card.purple-bg {
+  background-color: #b562be;
+}
+.action-card.mat-card.aquagreen-bg {
+  background-color: #2aafba;
+}
+
+.ico {
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.ico-custom-width {
+  height: 40px;
+  width: 30px;
+}
+/* .noun-time-report-ico {
+  background-image: url('../../../../../../../../src/assets/images/noun-time-report-ico.png');
+  background-size: 70% 90%;
+}
+.daily-expenses-ico {
+  background-image: url('../../../../../../../../src/assets/images/daily-expenses-ico.png');
+}
+.travel-expense-ico {
+  background-image: url('../../../../../../../../src/assets/images/travel-expense-ico.png');
+  background-size: 90% 80%;
+}
+.kit-allowance-ico {
+  background-image: url('../../../../../../../../src/assets/images/kit-allowance-ico.png');
+}
+.tax-ico {
+  background-image: url('../../../../../../../../src/assets/images/tax-ico.png');
+  background-size: 100% 90%;
+}
+.othr-reimburse-ico {
+  background-image: url('../../../../../../../../src/assets/images/othr-reimburse-ico.png');
+} */
+.action-card.mat-card.seagreen-bg {
+  background: #2aafba;
+}
+.action-card.mat-card.lightblue-bg {
+  background: #5a9be6;
+}
+.action-card.mat-card.lightpink-bg {
+  background: #b562be;
+}
+/* .loans-ico {
+  background-image: url('../../../../../../../../src/assets/images/loans-ico.png');
+  background-size: 90% 100%;
+}
+.tax-dec-ico {
+  background-image: url('../../../../../../../../src/assets/images/tax-dec-ico.png');
+  background-size: 90% 100%;
+}
+.tax-proj-ico {
+  background-image: url('../../../../../../../../src/assets/images/tax-proj-ico.png');
+  background-size: 90% 100%;
+}
+.vehicle-ico {
+  background-image: url('../../../../../../../../src/assets/images/vehicle-ico.png');
+  background-size: 100% 65%;
+  width: 50px;
+}
+.choicepay-ico {
+  background-image: url('../../../../../../../../src/assets/images/choicepay-ico.png');
+  background-size: 80% 100%;
+}
+.down-arrow-ico {
+  background-image: url('../../../../../../../../src/assets/images/down-arrow.png');
+  background-size: 100% 100%;
+}
+.up-arrow-ico {
+  background-image: url('../../../../../../../../src/assets/images/down-arrow.png');
+  background-size: 100% 100%;
+  transform: rotate(180deg);
+}
+.assessor-evaluation-ico {
+  background-image: url('../../../../../../../../src/assets/images/svg/assessor-evaluation-ico.svg');
+}
+.emp-self-evaluation-ico {
+  background-image: url('../../../../../../../../src/assets/images/svg/emp-self-evaluation-ico.svg');
+}
+.emp-assessment-list-ico {
+  background-image: url('../../../../../../../../src/assets/images/svg/emp-assessment-list-ico.svg');
+}
+.pending-assessment-list-ico {
+  background-image: url('../../../../../../../../src/assets/images/svg/pending-assessment-list-ico.svg');
+} */
+/* 16-10-2020 */
+/* .edit-icon {
+  background-image: url('../../../../../../../../src/assets/images/edit-icon.png');
+  background-size: 100% 100%;
+} */
+.absolute-center {
+  margin: auto;
+  /* position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0; */
+}
+.header-flex{
+  flex: none !important;
+}
+.fontbold{
+  font-size:30px;
+}

@@ -1,0 +1,297 @@
+<!-- Section: Design Block -->
+<section class="">
+  <!-- Jumbotron -->
+  <div
+    class="px-4 py-5 px-md-5 text-center text-lg-start"
+    style="background-color: hsl(0, 0%, 96%)"
+  >
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            The best offer <br />
+            <span class="text-primary">for your business</span>
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            itaque accusantium odio, soluta, corrupti aliquam quibusdam tempora
+            at cupiditate quis eum maiores libero veritatis? Dicta facilis sint
+            aliquid ipsum atque?
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        [(ngModel)]="form.name"
+                        name="name"
+                        #name="ngModel"
+                        ngModel
+                        required
+                        minlength="5"
+                        maxlength="32"
+                        [ngClass]="{ error: name.errors && name.touched }"
+                      />
+                      <label class="form-label" for="form3Example1 ">
+                        Name</label
+                      >
+                      <div class="errors" *ngIf="name.errors && name.touched">
+                        <small
+                          class="text-danger"
+                          *ngIf="name.errors['required']"
+                          >Name is required</small
+                        >
+                        <small
+                          class="text-danger"
+                          *ngIf="name.errors['maxlength']"
+                          >Name should not be 32 character long</small
+                        >
+                        <small
+                        class="text-danger"
+                        *ngIf="name.errors['minlength']"
+                        >Name should be minimum 5 character long</small
+                      >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="address"
+                        class="form-control"
+                        [(ngModel)]="form.address"
+                        name="address"
+                        #address="ngModel"
+                        ngModel
+                        required
+                        maxlength="32"
+                        [ngClass]="{ error: address.errors && address.touched }"
+                      />
+                      <label class="form-label" for="form3Example2"
+                        >Address</label
+                      >
+                      <div
+                        class="errors"
+                        *ngIf="address.errors && address.touched"
+                      >
+                        <small
+                          class="text-danger"
+                          *ngIf="address.errors['required']"
+                          >Address is required</small
+                        >
+                        <small
+                          class="text-danger"
+                          *ngIf="address.errors['maxlength']"
+                          >Address should not be 32 character long</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    [(ngModel)]="form.email"
+                    name="email"
+                    #email="ngModel"
+                    ngModel
+                    [pattern]="mailRegex"
+                    [ngClass]="{ error: email.errors && email.touched }"
+                  />
+                  <label class="form-label" for="form3Example3"
+                    >Email address</label
+                  >
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                  <div class="errors" *ngIf="email.errors && email.touched">
+                    <small class="text-danger" *ngIf="email.errors['required']"
+                      >Email is required</small
+                    >
+                    <small class="text-danger" *ngIf="email.errors['pattern']"
+                      >Please enter valid email address</small
+                    >
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="college"
+                    class="form-control"
+                    [(ngModel)]="form.college"
+                    name="college"
+                    #college="ngModel"
+                    ngModel
+                    required
+                    minlength="5"
+                    maxlength="15"
+                    [ngClass]="{ error: college.errors && college.touched }"
+                  />
+                  <label class="form-label" for="form3Example3"
+                    >College/Company</label
+                  >
+                  <div class="errors" *ngIf="college.errors && college.touched">
+                    <small
+                      class="text-danger"
+                      *ngIf="college.errors['required']"
+                      >College name is required</small
+                    >
+                    <small
+                      class="text-danger"
+                      *ngIf="college.errors['maxlength']"
+                      >College name should not be more than 15 character</small
+                    ><br />
+                    <small
+                      class="text-danger"
+                      *ngIf="college.errors['minlength']"
+                      >College name should be minimum 5 character long</small
+                    >
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="number"
+                    class="form-control"
+                    [(ngModel)]="form.number"
+                    name="number"
+                    minlength="10"
+                    maxlength="10"
+                    #number="ngModel"
+                    ngModel
+                    required
+                    maxlength="10"
+                    minlength="10"
+                    [pattern]="intergerRegex"
+                    [ngClass]="{ error: number.errors && number.touched }"
+                  />
+                  <label class="form-label" for="form3Example3"
+                    >Contact Number</label
+                  >
+                  <div class="errors" *ngIf="number.errors && number.touched">
+                    <small class="text-danger" *ngIf="number.errors['required']"
+                      >Mobile number is required</small
+                    >
+                    <small class="text-danger" *ngIf="number.errors['pattern']"
+                      >Please enter valid mobile number</small
+                    ><br>
+                    <small
+                      class="text-danger"
+                      *ngIf="
+                        number.errors['maxlength'] || number.errors['minlength']
+                      "
+                      >Mobile number should be 10 digit</small
+                    ><br />
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    [(ngModel)]="form.password"
+                    name="password"
+                    minlength="8"
+                    #password="ngModel"
+                    ngModel
+                    [ngClass]="{ error: password.errors && password.touched }"
+                  />
+                  <label class="form-label" for="form3Example4">Password</label>
+                  <div
+                    class="errors"
+                    *ngIf="password.errors && password.touched"
+                  >
+                    <small
+                      class="text-danger"
+                      *ngIf="password.errors['required']"
+                      >Password is required</small
+                    >
+                    <small
+                      class="text-danger"
+                      *ngIf="password.errors['minlength']"
+                      >Password should be minimum 8 character long</small
+                    ><br />
+                  </div>
+                </div>
+
+                <!-- Upload File -->
+                <div class="form-outline mb-4">
+                  <label>Profile Photo</label>
+                  <input
+                    type="file"
+                    id="file"
+                    class="form-control"
+                    name="file"
+                    #file="ngModel"
+                    (change)="onfileSelected($event)"
+                    accept="*.jpg.png"
+                    ngModel
+                  />
+                  <div class="loadingSpinner" id="loadingSpinner"></div>
+                </div>
+
+                <div class="move-btn">
+                  <div class="btn">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block mb-4"
+                      [disabled]="f.form.status === 'INVALID'"
+                      mat-raised-button
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <img
+                      src="https://i0.wp.com/gillianperkins.com/wp-content/uploads/2017/04/Google_22G22_Logo.svg_.png?fit=2000%2C2000&ssl=1"
+                    />
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMk27JKUrqJYIX9gPrt3rLA9w70aImtmHr-hutirI&s"
+                    />
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <img
+                      src="https://tse1.mm.bing.net/th?id=OIP.PSj_SQum7CH01WhmY2kFcAHaHx&pid=Api&P=0"
+                    />
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwJPZ4itSePdjATL65qFlgKFb-mr4vUO__g&usqp=CAU"
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

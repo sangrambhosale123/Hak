@@ -1,0 +1,9 @@
+<div class="search-box">
+  <input
+    type="text"
+    placeholder="Search..."
+    [(ngModel)]="enteredSearchValue"
+    (input)="onSearchTextChange()"
+  />
+  <button type="submit">Search</button>
+</div>

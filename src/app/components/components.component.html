@@ -1,0 +1,28 @@
+<!-- <button (click)="openDialog()">Add Component</button>
+
+<div class="main-container" *ngFor="let component of components">
+  <div class="container"><h1>{{component.name}}</h1></div>
+  <p>{{component.description}}</p>
+  <p>{{component.cost}}</p>
+  <img src="{{ component.componentImage }}" class="card-img-top">
+  <p>{{component.id}}</p>
+  <button (click)="editComponent(component.id)">edit Component</button>
+</div> -->
+
+<div class="test">
+  <div class="container">
+  <app-search (searchTextChange)="onSearchtextEntered($event)"></app-search>
+    <div class="row">
+        <ng-container *ngFor="let component of components">
+            <div class="card col-md-3" *ngIf="searchText === '' || component.name.toLowerCase().includes(searchText)">
+                <img src="{{component.componentImage}}" alt="">
+                <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{component.name}}</h2>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{component.description}}</p>
+                <p><strong>Price:</strong> ${{component.cost}}</p>
+                <button class="btn btn-primary" (click)=myComponents(component)>Check Out</button>
+            </div>
+        </ng-container>
+  
+    </div>
+  </div>
+  </div>

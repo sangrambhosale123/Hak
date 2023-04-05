@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hak-database": {
+      "hosting": {
+        "hakProject": [
+          "hak-database"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hak-database"
+  }
+}

@@ -1,0 +1,17 @@
+
+<div class="main-container">
+<div class="h1"><h1>Contact Us</h1></div>
+<form [formGroup]="contactUs" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-control" id="name" formControlName="title">
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="messege" id="floatingTextarea2" style="height: 100px" formControlName="description"></textarea>
+        <label for="floatingTextarea2">Description</label>
+      </div>
+      <div class="button">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+</div>
