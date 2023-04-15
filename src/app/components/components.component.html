@@ -1,6 +1,8 @@
-<!-- <button (click)="openDialog()">Add Component</button>
+ <div class="button1">
+ <button (click)="openDialog()">Add Component</button>
+</div>
 
-<div class="main-container" *ngFor="let component of components">
+<!--<div class="main-container" *ngFor="let component of components">
   <div class="container"><h1>{{component.name}}</h1></div>
   <p>{{component.description}}</p>
   <p>{{component.cost}}</p>
@@ -19,6 +21,8 @@
                 <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{component.name}}</h2>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{component.description}}</p>
                 <p><strong>Price:</strong> ${{component.cost}}</p>
+                <button class="btn btn-primary" (click)="editComponent(component.id)">edit Component</button>
+                <br>
                 <button class="btn btn-primary" (click)=myComponents(component)>Check Out</button>
             </div>
         </ng-container>

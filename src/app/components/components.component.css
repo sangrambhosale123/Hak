@@ -52,3 +52,6 @@
    transition: 0.3s ease-in-out;
    transform: scale(1.1);
  }
+ .button1{
+  padding-left: 50%;
+}

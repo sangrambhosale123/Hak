@@ -36,7 +36,7 @@ export class ComponentsComponent implements OnInit {
     });
   }
 
-  editComponent(id:any){
+     editComponent(id:any){
    for( let key in this.components){
      var value = this.components[key];
      if(value.id == id){
