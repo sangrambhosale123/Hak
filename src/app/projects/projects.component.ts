@@ -74,8 +74,6 @@ export class ProjectsComponent implements OnInit {
         this.editProject1 = value;
       }
     }
-    console.log(this.editProject1);
-
     this.matdiaRef.open(EditProjectComponent, {
       width: '500px',
       data: this.editProject1,

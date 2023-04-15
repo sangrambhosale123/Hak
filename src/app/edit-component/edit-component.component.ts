@@ -3,7 +3,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { getDownloadURL, ref, Storage, uploadBytesResumable } from '@angular/fire/storage';
 import { FormControl, FormGroup } from '@angular/forms';
 import { signupService } from 'src/Service/Signup.service';
-import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-edit-component',

@@ -124,6 +124,11 @@ export class signupService {
   updateUser(userData:any,id:any){
     return this.http.put('https://hak-database-default-rtdb.firebaseio.com/users/'+id+'.json',userData)
 }
+
+updateProject(projectData:any,id:any){
+  return this.http.put('https://hak-database-default-rtdb.firebaseio.com/projects/'+id+'.json',projectData)
+}
+
   getProjectData() {
     return this.http.get('https://hak-database-default-rtdb.firebaseio.com/projects.json');
   }
