@@ -4,7 +4,7 @@
   <div class="row" *ngIf="projectStatus !== 'active'">
       <ng-container *ngFor="let project of projects">
           <div class="card col-md-3" *ngIf="searchText === '' || project.name.toLowerCase().includes(searchText)">
-              <img src="{{project.projectImage1}}" alt="">
+              <img src="{{project.projectImage}}" alt="">
               <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{project.name}}</h2>
               <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{project.description}}</p>
               <p><strong>Price:</strong>{{project.sellCost}} Rs</p>

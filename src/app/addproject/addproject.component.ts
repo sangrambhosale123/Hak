@@ -65,38 +65,6 @@ export class AddprojectComponent implements OnInit {
       });
     })
   }
-  onImageSelected2(event:any){
-    this.path = event.target.files[0];
-    const storageData = ref(this.storage,'Project Images/'+this.path.name);
-    const uploadTask = uploadBytesResumable(storageData,this.path);
-    uploadTask.on('state_changed',
-    /*(snapshot)=>{ 
-      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) *100;
-      console.log('upload is' + progress + '% done');
-    },*/
-    () =>{
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        console.log("before:-",downloadURL)
-        this.downloadURL2 = downloadURL;
-      });
-    })
-  }
-  onImageSelected3(event:any){
-    this.path = event.target.files[0];
-    const storageData = ref(this.storage,'Project Images/'+this.path.name);
-    const uploadTask = uploadBytesResumable(storageData,this.path);
-    uploadTask.on('state_changed',
-    /*(snapshot)=>{ 
-      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) *100;
-      console.log('upload is' + progress + '% done');
-    },*/
-    () =>{
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        console.log("before:-",downloadURL)
-        this.downloadURL3 = downloadURL;
-      });
-    })
-  }
 
   
   onSubmit(form:NgForm){
