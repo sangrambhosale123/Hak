@@ -118,4 +118,12 @@ export class ProjectsComponent implements OnInit {
     this.searchText = searchValue;
     console.log(this.searchText);
   }
+  deleteProject(id:any){
+this.service.deleteProject(id).subscribe((res)=>{
+  console.log(res);
+  console.log("done delete");
+  window.location.reload();
+})
+
+  }
 }

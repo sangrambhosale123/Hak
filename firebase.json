@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/hak-project",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",

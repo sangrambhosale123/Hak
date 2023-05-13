@@ -129,6 +129,10 @@ updateProject(projectData:any,id:any){
   return this.http.put('https://hak-database-default-rtdb.firebaseio.com/projects/'+id+'.json',projectData)
 }
 
+deleteProject(id:any){
+  return this.http.delete('https://hak-database-default-rtdb.firebaseio.com/projects/'+id+'.json')
+}
+
   getProjectData() {
     return this.http.get('https://hak-database-default-rtdb.firebaseio.com/projects.json');
   }

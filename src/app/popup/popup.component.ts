@@ -14,5 +14,6 @@ export class PopupComponent implements OnInit {
   closeWindow() {
     console.log('Working');
     this.dialog.closeAll();
+    window.location.reload();
   }
 }
